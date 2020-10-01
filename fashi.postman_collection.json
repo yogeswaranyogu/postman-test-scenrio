@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "975deea0-d367-4ad0-a90e-6f6eab483c0e",
+		"name": "fashi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pit@pit.com\",\r\n    \"password\": \"asdh1233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://206.189.140.174:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"140",
+						"174"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postsignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pit@pit.com\",\r\n    \"name\": \"ashokk\",\r\n    \"password\": \"asdh1233\",\r\n    \"gender\": \"Male\",\r\n    \"dob\": \"22-03-1990\",\r\n    \"mobileNo\": \"9090909090\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://206.189.140.174:8000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"140",
+						"174"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
