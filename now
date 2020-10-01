@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "975deea0-d367-4ad0-a90e-6f6eab483c0e",
+		"name": "fashi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "14f92465-40df-48c1-8b32-c7dbaac26105",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"key is present\",function(){\r",
+							"pm.expect(pm.response.headers.get(\"Content-type\")).to.eql(\"application/json; charset=utf-8\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35c6d6aa-e552-4ffc-a4b6-36f35ac3fb05",
+						"exec": [
+							"pm.request.headers.add({\r",
+							"key: 'Content-Type',\r",
+							"value: 'application/json'\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pit@pit.com\",\r\n    \"password\": \"asdh1233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://206.189.140.174:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"206",
+						"189",
+						"140",
+						"174"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6ef1ec9e-3f4a-44f0-bc28-fd0bc88fde7a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d1ed9b38-90d7-478f-83ed-f606bdad2faf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0716040e-b971-452e-9d15-9913ea12c83e",
+			"key": "yoyo",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
